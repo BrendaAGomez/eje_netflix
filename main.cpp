@@ -62,7 +62,16 @@ void buscarPorTitulo(Pelicula peliculas[], int cantidad, const char* consulta) {
 }
 
 void ordenarPorReproducciones(Pelicula peliculas[], int cantidad) {
-//TODO implementar ordenamiento
+    for(int i = 0; i < cantidad -1; i++){
+        for(int j = i + 1; j < cantidad; j++){
+            if(peliculas[i].reproducciones < peliculas[j].reproducciones){
+                Pelicula aux = peliculas[i]; // se intercambia todo no solo el 
+                peliculas[i] = peliculas[j];
+                peliculas[j] = aux;
+
+            }
+        }
+    }
 }
 
 void ordenarPorTitulo(Pelicula peliculas[], int cantidad) {
